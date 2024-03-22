@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let randomNumber = Math.floor((Math.random() * 3));
+    function getComputerChoice(){
+        let computerSelection;
+        if(randomNumber == 0){
+         computerSelection = "Rock"
+        }else if(randomNumber == 1){
+         computerSelection = "Paper"
+        }
+        else{
+            computerSelection = "Scissors";
+        }
+        return computerSelection
+       }
+
+        function playRound(playerSelection,ComputerSelection) {
+            let output;
+            if(playerSelection == "Rock" && ComputerSelection == "Paper"){
+            output = "You lose,Paper beats Rock";
+            }else if(playerSelection == "Rock" && ComputerSelection == "Scissors"){
+            output = "You Win,Rock beats Scissors"
+            }else if(playerSelection == "Rock" && ComputerSelection == "Rock"){
+             output = "it is a tie"
+            }
+            return output
+        }
+        function playGame(){
+            playerSelection =  prompt("choose ROCK FIRST LETTER MUST BE CAPITAL");
+              const computerSelection = getComputerChoice();
+               console.log(playRound(playerSelection,computerSelection));
+               console.log(playRound(playerSelection,computerSelection));
+               console.log(playRound(playerSelection,computerSelection));
+               console.log(playRound(playerSelection,computerSelection));
+               console.log(playRound(playerSelection,computerSelection));
+ }
+    playGame()  
+    
+    </script>
+</body>
+</html>
